@@ -74,6 +74,7 @@ naver_url = 'http://www.naver.com'
 naver_id = ''
 naver_passwd = ''
 def naver_login():
+    #executable_path에 PhantomJS 실행 경로 입력 (필수아님)
     driver = webdriver.PhantomJS(executable_path='/Users/cheochangwon/Documents/WorkspacePython/SeleniumSample/phantomjs'
     , service_args=['--ssl-protocol=tlsv1'])
     #인증서 관련 업데이트
