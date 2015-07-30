@@ -75,7 +75,11 @@ naver_id = ''
 naver_passwd = ''
 def naver_login():
     driver = webdriver.PhantomJS(executable_path='/Users/cheochangwon/Documents/WorkspacePython/SeleniumSample/phantomjs'
-    , service_args=['--ignore-ssl-errors=true', '--ssl-protocol=tlsv1'])
+    , service_args=['--ssl-protocol=tlsv1'])
+    #인증서 관련 업데이트
+    #'--ignore-ssl-errors=true',
+    #https://groups.google.com/forum/#!topic/nzpug/Y2UfnQcG7YU
+    #http://stackoverflow.com/questions/12021578/phantomjs-failing-to-open-https-site
     driver.get(naver_url)
     driver.set_window_size(1024,768)
     naver_login_frame = driver.find_element_by_id("loginframe")
